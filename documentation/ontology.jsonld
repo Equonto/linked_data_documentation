@@ -1,0 +1,472 @@
+[ {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Component",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:PhysicalObject that  may have some OMPD:ResourceRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Hazard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Hazard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/logicAxiom" : [ {
+    "@value" : "Hazard _ RealizeableEntity _ (_realizedIn.HazardRealizationProcess)"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#HazardInMaintenanceProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An OMPD: Hazard that is realized in some OMPD: Hazard Realization Process that occurs relative to some OMPD: Maintenance Process"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HazardInMaintenanceProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Disposition"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#HazardRealizationProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO: Activity that has the potential to cause harm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HazardRealizationProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:PhysicalObject hat has a role OMPD:MaintainableItemRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintainableItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItemRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:Role that is the role of the item that work is performed on in a OMPD:MaintenanceProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintainableItemRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureDocument",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:InformationObject that is about some OMPD:MaineanceProcedureProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintenanceProcedureDocument"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintenanceProcedureProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO: Activity, intended to repair or restore an item to a state in which it can perform its required function"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintenanceProcess"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTaskDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:InformationObject that is about some OMPD:MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MaintenanceTaskDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:PhysicalObject that may have some OMPD:ResourceRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Permit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:InformationObject that  may have some OMPD:ResourceRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Permit"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Qualification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:Quality that is beared by zero or more OMPD:QualitifiedPerson"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Qualification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Quality"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#QualifiedPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:Person that may have some OMPD:ResourceRole and has a OMPD:Qualification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "QualifiedPerson"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Resource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO: Object that has some OMPD: Resource Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Resource"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Object"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#ResourceRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:Role that is the role of an ISO:Object that is required to execute some ISO:Activity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ResourceRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Role"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#Tool",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A ISO:PhysicalObject that  may have some OMPD:ResourceRole"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tool"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directActivityPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectActivityPartOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasDirectActivityPart"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directlyAfter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectlyAfter"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectlyBefore"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasDirectActivityPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasIndirectActivityPart"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasIndirectActivityPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasRequirement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#requirementOf"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectActivityPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasIndirectActivityPart"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectlyAfter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/after"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectlyBefore"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#indirectlyBefore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/before"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#locallyEquivalentTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#reasoningSupport"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#reasoningSupport",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#requirementOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#hasRequirement"
+  } ]
+}, {
+  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/abstract" : [ {
+    "@value" : "The OMPD Static Procedure Ontology captures static information found in most insdutrial maintenance procedures."
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Caitlin Woods: The University of Western Australia and Equonto"
+  }, {
+    "@value" : "Melinda Hodkiewicz: The University of Western Australia"
+  }, {
+    "@value" : "Tim French: The University of Western Australia"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "The University of Western Australia & Equonto Pty. Ltd."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@value" : "http://opensource.org/licenses/MIT"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@value" : "Equonto Pty. Ltd."
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@value" : "Ontology for Maintenance Procedure Documentation (OMPD) Static Procedure Ontology"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Maintenance Procedures - Static Procedure Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/ont/core"
+  }, {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://spec.equonto.com/ontology/202312/maintenance-procedure/static-procedure-ontology"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+} ]
