@@ -25,11 +25,47 @@
 #    Object Properties
 #################################################################
 
+###  http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/hasRole
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/isAbout
+<http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo
+<http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn
+<http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/representedBy
+<http://rds.posccaesar.org/ontology/lis14/rdl/representedBy> rdf:type owl:ObjectProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/roleOf
+<http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> rdf:type owl:ObjectProperty .
+
+
 ###  http://spec.equonto.com/ontology/maintenance-procedure#directActivityPartOf
 <http://spec.equonto.com/ontology/maintenance-procedure#directActivityPartOf> rdf:type owl:ObjectProperty ;
                                                                               rdfs:subPropertyOf <http://spec.equonto.com/ontology/maintenance-procedure#indirectActivityPartOf> ;
                                                                               owl:inverseOf <http://spec.equonto.com/ontology/maintenance-procedure#hasDirectActivityPart> ;
                                                                               rdf:type owl:IrreflexiveProperty .
+
+
+###  http://spec.equonto.com/ontology/maintenance-procedure#directlyActivityPartOf
+<http://spec.equonto.com/ontology/maintenance-procedure#directlyActivityPartOf> rdf:type owl:ObjectProperty .
 
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#directlyAfter
@@ -93,14 +129,54 @@
 <http://spec.equonto.com/ontology/maintenance-procedure#reasoningSupport> rdf:type owl:ObjectProperty .
 
 
+###  http://spec.equonto.com/ontology/maintenance-procedure#representedBy
+<http://spec.equonto.com/ontology/maintenance-procedure#representedBy> rdf:type owl:ObjectProperty .
+
+
 ###  http://spec.equonto.com/ontology/maintenance-procedure#requirementOf
 <http://spec.equonto.com/ontology/maintenance-procedure#requirementOf> rdf:type owl:ObjectProperty ;
-                                                                       rdfs:subPropertyOf <http://spec.equonto.com/ontology/maintenance-procedure#hasRequirement> .
+                                                                       rdfs:subPropertyOf <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://spec.equonto.com/ontology/maintenance-procedure#documentIdentifier
+<http://spec.equonto.com/ontology/maintenance-procedure#documentIdentifier> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                                            rdfs:label "documentIdentifier" .
+
+
+###  http://spec.equonto.com/ontology/maintenance-procedure#hasImageUrl
+<http://spec.equonto.com/ontology/maintenance-procedure#hasImageUrl> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:label "hasImageUrl" .
+
+
+###  http://spec.equonto.com/ontology/maintenance-procedure#hasTextValue
+<http://spec.equonto.com/ontology/maintenance-procedure#hasTextValue> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:label "hasTextValue" .
+
+
+###  http://spec.equonto.com/ontology/maintenance-procedure#hasVersion
+<http://spec.equonto.com/ontology/maintenance-procedure#hasVersion> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                    rdfs:label "hasVersion" .
 
 
 #################################################################
 #    Classes
 #################################################################
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/Activity
+<http://rds.posccaesar.org/ontology/lis14/rdl/Activity> rdf:type owl:Class .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity
+<http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity> rdf:type owl:Class .
+
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#Component
 <http://spec.equonto.com/ontology/maintenance-procedure#Component> rdf:type owl:Class ;
@@ -113,7 +189,16 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#Hazard
 <http://spec.equonto.com/ontology/maintenance-procedure#Hazard> rdf:type owl:Class ;
+                                                                owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity>
+                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                             owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> ;
+                                                                                                             owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#HazardRealizationProcess>
+                                                                                                           ]
+                                                                                                         ) ;
+                                                                                      rdf:type owl:Class
+                                                                                    ] ;
                                                                 rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Disposition> ;
+                                                                rdfs:comment "An ISO: Realizeable Entity that is realizrd in some OMPD: Hazard Realization Process" ;
                                                                 rdfs:label "Hazard" ;
                                                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive> "false"^^xsd:boolean ;
                                                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/logicAxiom> "Hazard _ RealizeableEntity _ (_realizedIn.HazardRealizationProcess)" ;
@@ -122,6 +207,21 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#HazardInMaintenanceProcess
 <http://spec.equonto.com/ontology/maintenance-procedure#HazardInMaintenanceProcess> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ owl:intersectionOf ( <http://spec.equonto.com/ontology/maintenance-procedure#Hazard>
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn> ;
+                                                                                                                                 owl:someValuesFrom [ owl:intersectionOf ( <http://spec.equonto.com/ontology/maintenance-procedure#HazardRealizationProcess>
+                                                                                                                                                                           [ rdf:type owl:Restriction ;
+                                                                                                                                                                             owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo> ;
+                                                                                                                                                                             owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess>
+                                                                                                                                                                           ]
+                                                                                                                                                                         ) ;
+                                                                                                                                                      rdf:type owl:Class
+                                                                                                                                                    ]
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ] ;
                                                                                     rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Disposition> ;
                                                                                     rdfs:comment "An OMPD: Hazard that is realized in some OMPD: Hazard Realization Process that occurs relative to some OMPD: Maintenance Process" ;
                                                                                     rdfs:label "HazardInMaintenanceProcess" ;
@@ -140,6 +240,14 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem
 <http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem> rdf:type owl:Class ;
+                                                                          owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject>
+                                                                                                                     [ rdf:type owl:Restriction ;
+                                                                                                                       owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> ;
+                                                                                                                       owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItemRole>
+                                                                                                                     ]
+                                                                                                                   ) ;
+                                                                                                rdf:type owl:Class
+                                                                                              ] ;
                                                                           rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject> ;
                                                                           rdfs:comment "An ISO:PhysicalObject hat has a role OMPD:MaintainableItemRole" ;
                                                                           rdfs:label "MaintainableItem" ;
@@ -158,6 +266,14 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureDocument
 <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureDocument> rdf:type owl:Class ;
+                                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject>
+                                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                                   owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> ;
+                                                                                                                                   owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureProcess>
+                                                                                                                                 ]
+                                                                                                                               ) ;
+                                                                                                            rdf:type owl:Class
+                                                                                                          ] ;
                                                                                       rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
                                                                                       rdfs:comment "An ISO:InformationObject that is about some OMPD:MaineanceProcedureProcess" ;
                                                                                       rdfs:label "MaintenanceProcedureDocument" ;
@@ -167,6 +283,18 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureProcess
 <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureProcess> rdf:type owl:Class ;
+                                                                                     owl:equivalentClass [ owl:intersectionOf ( <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess>
+                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> ;
+                                                                                                                                  owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask>
+                                                                                                                                ]
+                                                                                                                                [ rdf:type owl:Restriction ;
+                                                                                                                                  owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/representedBy> ;
+                                                                                                                                  owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureDocument>
+                                                                                                                                ]
+                                                                                                                              ) ;
+                                                                                                           rdf:type owl:Class
+                                                                                                         ] ;
                                                                                      rdfs:subClassOf <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess> ;
                                                                                      rdfs:comment "An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask" ;
                                                                                      rdfs:label "MaintenanceProcedureProcess" ;
@@ -185,6 +313,33 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask
 <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask> rdf:type owl:Class ;
+                                                                         owl:equivalentClass [ owl:intersectionOf ( <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess>
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#representedBy> ;
+                                                                                                                      owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTaskDescription>
+                                                                                                                    ]
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#locallyEquivalentTo> ;
+                                                                                                                      owl:allValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask>
+                                                                                                                    ]
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#directActivityPartOf> ;
+                                                                                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                      owl:onClass <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask>
+                                                                                                                    ]
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#directlyActivityPartOf> ;
+                                                                                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                      owl:onClass <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcedureProcess>
+                                                                                                                    ]
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore> ;
+                                                                                                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                                                                                      owl:onClass <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask>
+                                                                                                                    ]
+                                                                                                                  ) ;
+                                                                                               rdf:type owl:Class
+                                                                                             ] ;
                                                                          rdfs:subClassOf <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceProcess> ;
                                                                          rdfs:comment "An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask" ;
                                                                          rdfs:label "MaintenanceTask" ;
@@ -194,6 +349,14 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTaskDescription
 <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTaskDescription> rdf:type owl:Class ;
+                                                                                    owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject>
+                                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                                 owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/isAbout> ;
+                                                                                                                                 owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask>
+                                                                                                                               ]
+                                                                                                                             ) ;
+                                                                                                          rdf:type owl:Class
+                                                                                                        ] ;
                                                                                     rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject> ;
                                                                                     rdfs:comment "An ISO:InformationObject that is about some OMPD:MaintenanceTask" ;
                                                                                     rdfs:label "MaintenanceTaskDescription" ;
@@ -230,6 +393,18 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#QualifiedPerson
 <http://spec.equonto.com/ontology/maintenance-procedure#QualifiedPerson> rdf:type owl:Class ;
+                                                                         owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/Person>
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality> ;
+                                                                                                                      owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#Qualification>
+                                                                                                                    ]
+                                                                                                                    [ rdf:type owl:Restriction ;
+                                                                                                                      owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#requirementOf> ;
+                                                                                                                      owl:someValuesFrom <http://rds.posccaesar.org/ontology/lis14/rdl/Activity>
+                                                                                                                    ]
+                                                                                                                  ) ;
+                                                                                               rdf:type owl:Class
+                                                                                             ] ;
                                                                          rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Person> ;
                                                                          rdfs:comment "A ISO:Person that may have some OMPD:ResourceRole and has a OMPD:Qualification" ;
                                                                          rdfs:label "QualifiedPerson" ;
@@ -239,6 +414,14 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#Resource
 <http://spec.equonto.com/ontology/maintenance-procedure#Resource> rdf:type owl:Class ;
+                                                                  owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/Object>
+                                                                                                             [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/hasRole> ;
+                                                                                                               owl:someValuesFrom <http://spec.equonto.com/ontology/maintenance-procedure#ResourceRole>
+                                                                                                             ]
+                                                                                                           ) ;
+                                                                                        rdf:type owl:Class
+                                                                                      ] ;
                                                                   rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Object> ;
                                                                   rdfs:comment "An ISO: Object that has some OMPD: Resource Role" ;
                                                                   rdfs:label "Resource" ;
@@ -248,6 +431,21 @@
 
 ###  http://spec.equonto.com/ontology/maintenance-procedure#ResourceRole
 <http://spec.equonto.com/ontology/maintenance-procedure#ResourceRole> rdf:type owl:Class ;
+                                                                      owl:equivalentClass [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/Role>
+                                                                                                                 [ rdf:type owl:Restriction ;
+                                                                                                                   owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/roleOf> ;
+                                                                                                                   owl:allValuesFrom [ owl:intersectionOf ( <http://rds.posccaesar.org/ontology/lis14/rdl/Object>
+                                                                                                                                                            [ rdf:type owl:Restriction ;
+                                                                                                                                                              owl:onProperty <http://spec.equonto.com/ontology/maintenance-procedure#requirementOf> ;
+                                                                                                                                                              owl:someValuesFrom <http://rds.posccaesar.org/ontology/lis14/rdl/Activity>
+                                                                                                                                                            ]
+                                                                                                                                                          ) ;
+                                                                                                                                       rdf:type owl:Class
+                                                                                                                                     ]
+                                                                                                                 ]
+                                                                                                               ) ;
+                                                                                            rdf:type owl:Class
+                                                                                          ] ;
                                                                       rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Role> ;
                                                                       rdfs:comment "An ISO:Role that is the role of an ISO:Object that is required to execute some ISO:Activity" ;
                                                                       rdfs:label "ResourceRole" ;
