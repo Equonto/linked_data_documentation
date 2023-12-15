@@ -105,6 +105,70 @@
     
 
 
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn"/>
+            <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn"/>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/before"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers">
+        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore -->
+
+
+    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
+    
+
+
     <!-- http://rds.posccaesar.org/ontology/lis14/rdl/before -->
 
 
@@ -140,70 +204,6 @@
     
 
 
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#addressedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#addressedBy">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#addresses -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#addresses">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
-        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#addressedBy"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore"/>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealisedIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealisedIn">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
-        <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealizedIn"/>
-            <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#triggers"/>
-        </owl:propertyChainAxiom>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealizedIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealizedIn"/>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#resultsIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#resultsIn">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/before"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#triggers -->
-
-
-    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#triggers">
-        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -213,6 +213,106 @@
      -->
 
 
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses"/>
+                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+        <rdfs:comment>A OMPD:maintenance task that addresses a OMPD:functional failure</rdfs:comment>
+        <rdfs:label>Corrective Maintenance Task</rdfs:label>
+        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
+        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+    </owl:Class>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent">
+        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Event"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn"/>
+                <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An ISO:Event that resuts in a OMPD: Functional Failure</rdfs:comment>
+        <rdfs:label>Failure Event</rdfs:label>
+        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
+        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+    </owl:Class>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"/>
+                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
+        <rdfs:comment>An ISO:Information object that denotes a OMPD:functional failure</rdfs:comment>
+        <rdfs:label>Failure Mode Observation</rdfs:label>
+        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
+        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+    </owl:Class>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure">
+        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
+                <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item</rdfs:comment>
+        <rdfs:label>Functional Failure</rdfs:label>
+        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
+        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+    </owl:Class>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem"/>
+    
+
+
+    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask -->
+
+
+    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
     
 
 
@@ -234,106 +334,6 @@
 
 
     <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#CorrectiveMaintenanceTask -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#CorrectiveMaintenanceTask">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#addresses"/>
-                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"/>
-        <rdfs:comment>A OMPD:maintenance task that addresses a OMPD:functional failure</rdfs:comment>
-        <rdfs:label>Corrective Maintenance Task</rdfs:label>
-        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
-        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
-    </owl:Class>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#FailureEvent -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#FailureEvent">
-        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Event"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#resultsIn"/>
-                <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>An ISO:Event that resuts in a OMPD: Functional Failure</rdfs:comment>
-        <rdfs:label>Failure Event</rdfs:label>
-        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
-        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
-    </owl:Class>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"/>
-                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
-        <rdfs:comment>An ISO:Information object that denotes a OMPD:functional failure</rdfs:comment>
-        <rdfs:label>Failure Mode Observation</rdfs:label>
-        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
-        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
-    </owl:Class>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure">
-        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
-                <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment>An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item</rdfs:comment>
-        <rdfs:label>Functional Failure</rdfs:label>
-        <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
-        <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
-    </owl:Class>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem"/>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"/>
 </rdf:RDF>
 
 

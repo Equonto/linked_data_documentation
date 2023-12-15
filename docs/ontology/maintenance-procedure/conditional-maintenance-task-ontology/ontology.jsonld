@@ -5,7 +5,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -14,14 +14,14 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem"
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"
+      "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"
     }, {
       "@id" : "_:genid5"
     } ]
@@ -30,19 +30,19 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#addresses"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#resultsIn"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure"
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"
   } ]
 }, {
   "@id" : "_:genid8",
@@ -54,6 +54,144 @@
       "@id" : "_:genid10"
     } ]
   } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A OMPD:maintenance task that addresses a OMPD:functional failure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Corrective Maintenance Task"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid3"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:Event that resuts in a OMPD: Functional Failure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Failure Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Event"
+  }, {
+    "@id" : "_:genid7"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO:Information object that denotes a OMPD:functional failure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Failure Mode Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid8"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Functional Failure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+  }, {
+    "@id" : "_:genid12"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
+    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addresses",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#addressedBy"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealisedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
+    "@list" : [ {
+      "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn"
+    }, {
+      "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers"
+    } ]
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#functionalFailureRealizedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#resultsIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/before"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#triggers",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"
+  } ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/abstract",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -96,144 +234,6 @@
 }, {
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#CorrectiveMaintenanceTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A OMPD:maintenance task that addresses a OMPD:functional failure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Corrective Maintenance Task"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid3"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FailureEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An ISO:Event that resuts in a OMPD: Functional Failure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Failure Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Event"
-  }, {
-    "@id" : "_:genid7"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FailureModeObservation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An ISO:Information object that denotes a OMPD:functional failure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Failure Mode Observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid8"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "false"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#FunctionalFailure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Functional Failure"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
-  }, {
-    "@id" : "_:genid12"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
-    "@value" : "true"
-  } ],
-  "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity" : [ {
-    "@id" : "https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintainableItem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#MaintenanceTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#addressedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#addresses",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#addressedBy"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealisedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"
-  } ],
-  "http://www.w3.org/2002/07/owl#propertyChainAxiom" : [ {
-    "@list" : [ {
-      "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealizedIn"
-    }, {
-      "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#triggers"
-    } ]
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#functionalFailureRealizedIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#resultsIn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/before"
-  } ]
-}, {
-  "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#triggers",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://spec.equonto.com/ontology/maintenance-procedure#directlyBefore"
-  } ]
 }, {
   "@id" : "http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
