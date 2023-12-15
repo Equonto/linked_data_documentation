@@ -43,140 +43,6 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf"/>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">
-        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter"/>
-        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
-        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">
-        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart"/>
-        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"/>
-        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/after"/>
-        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/before"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">
-        <rdfs:subPropertyOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
-        <rdfs:range rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"/>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy"/>
-    
-
-
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">
-        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
-        <owl:inverseOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart -->
 
 
@@ -233,6 +99,192 @@
     
 
 
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf"/>
+        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf"/>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore"/>
+        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyAfter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasDirectActivityPart">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectActivityPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"/>
+        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasIndirectActivityPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/after"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyBefore">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/before"/>
+        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#indirectlyAfter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo">
+        <rdfs:subPropertyOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+        <rdfs:range rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#reasoningSupport"/>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy"/>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf">
+        <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
+        <owl:inverseOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasRequirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#documentIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#documentIdentifier">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>documentIdentifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasImageUrl -->
+
+
+    <owl:DatatypeProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasImageUrl">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>hasImageUrl</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue -->
+
+
+    <owl:DatatypeProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasTextValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>hasTextValue</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#hasVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:label>hasVersion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -245,10 +297,24 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Component -->
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Activity -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Component">
+    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+    
+
+
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity -->
+
+
+    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"/>
+    
+
+
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Component -->
+
+
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Component">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
         <rdfs:comment>A ISO:PhysicalObject that  may have some OMPD:ResourceRole</rdfs:comment>
         <rdfs:label>Component</rdfs:label>
@@ -258,17 +324,17 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -283,23 +349,23 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardInMaintenanceProcess">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard"/>
+                    <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Hazard"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/realizedIn"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"/>
+                                    <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
-                                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
+                                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
@@ -317,10 +383,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#HazardRealizationProcess">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
         <rdfs:comment>An ISO: Activity that has the potential to cause harm</rdfs:comment>
         <rdfs:label>HazardRealizationProcess</rdfs:label>
@@ -330,17 +396,17 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -354,10 +420,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItemRole">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Role"/>
         <rdfs:comment>An ISO:Role that is the role of the item that work is performed on in a OMPD:MaintenanceProcess</rdfs:comment>
         <rdfs:label>MaintainableItemRole</rdfs:label>
@@ -367,17 +433,17 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -391,26 +457,26 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
+                    <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/representedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureDocument"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
+        <rdfs:subClassOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
         <rdfs:comment>An OMPD:MaintenanceProcess that is represented in some OMPD:MaintenanceProcedureDocument and has activity part some OMPD:MaintenanceTask</rdfs:comment>
         <rdfs:label>MaintenanceProcedureProcess</rdfs:label>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
@@ -419,10 +485,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
         <rdfs:comment>An ISO: Activity, intended to repair or restore an item to a state in which it can perform its required function</rdfs:comment>
         <rdfs:label>MaintenanceProcess</rdfs:label>
@@ -432,41 +498,41 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
+                    <rdf:Description rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#representedBy"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo"/>
-                        <owl:allValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#locallyEquivalentTo"/>
+                        <owl:allValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directActivityPartOf"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                        <owl:onClass rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyActivityPartOf"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"/>
+                        <owl:onClass rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcedureProcess"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#directlyBefore"/>
                         <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                        <owl:onClass rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                        <owl:onClass rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
+        <rdfs:subClassOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceProcess"/>
         <rdfs:comment>An OMPD:MaintenanceProcess that is: - a direct activity part of zero or one OMPD:MaintenanceProcedureProcess - an activity part of zero or more OMPD:MaintenanceProcedureProcess - a direct activity part of zero or one OMPD:MaintenanceTask - an activity part of zero or more OMPD:MaintenanceTask - occurs directly before zero or one Maintenance task - occurs before zero or more MaintenanceTask - occurs directly after zero or one MaintenanceTask - occurs after zero or more OMPD:MaintenanceTask</rdfs:comment>
         <rdfs:label>MaintenanceTask</rdfs:label>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
@@ -475,17 +541,17 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTaskDescription">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/isAbout"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -499,10 +565,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Material -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Material -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Material">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Material">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
         <rdfs:comment>A ISO:PhysicalObject that may have some OMPD:ResourceRole</rdfs:comment>
         <rdfs:label>Material</rdfs:label>
@@ -512,10 +578,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Permit -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Permit -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Permit">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Permit">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
         <rdfs:comment>A ISO:InformationObject that  may have some OMPD:ResourceRole</rdfs:comment>
         <rdfs:label>Permit</rdfs:label>
@@ -525,10 +591,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Quality"/>
         <rdfs:comment>A ISO:Quality that is beared by zero or more OMPD:QualitifiedPerson</rdfs:comment>
         <rdfs:label>Qualification</rdfs:label>
@@ -538,21 +604,21 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#QualifiedPerson">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Person"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"/>
-                        <owl:someValuesFrom rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+                        <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Qualification"/>
+                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"/>
+                        <owl:someValuesFrom rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -566,17 +632,17 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Resource -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Resource -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Resource">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Resource">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasRole"/>
-                        <owl:someValuesFrom rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole"/>
+                        <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -590,10 +656,10 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#ResourceRole">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -605,7 +671,7 @@
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"/>
+                                        <owl:onProperty rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#requirementOf"/>
                                         <owl:someValuesFrom rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
                                     </owl:Restriction>
                                 </owl:intersectionOf>
@@ -624,30 +690,16 @@
     
 
 
-    <!-- http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Tool -->
+    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Tool -->
 
 
-    <owl:Class rdf:about="http://equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Tool">
+    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#Tool">
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
         <rdfs:comment>A ISO:PhysicalObject that  may have some OMPD:ResourceRole</rdfs:comment>
         <rdfs:label>Tool</rdfs:label>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
         <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
     </owl:Class>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Activity -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/RealizableEntity"/>
 </rdf:RDF>
 
 
