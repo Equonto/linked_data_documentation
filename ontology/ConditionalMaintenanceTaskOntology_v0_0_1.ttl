@@ -62,7 +62,7 @@
         dcterms:license      "http://opensource.org/licenses/MIT" ;
         dcterms:title        "Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology" ;
         dcterms:publisher    "Equonto Pty. Ltd." ;
-        dcterms:abstract     "The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures." .
+        dcterms:abstract     "The OMPD Conditional Maintenance Task Ontology captures functional failures and corrective maintenance tasks (to be conditionally executed on the occurrence of a function failure) found in some industrial maintenance procedures. This ontology captures information currently stored in maintenance procedure documentation in a generalizable way and supports its core users (maintenance technicians, maintenance engineers and maintenance schedulers) in their work. This ontology is designed to be used alongside the Static Procedure Ontology (https://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology/) for a more detailed description of maintenance procedures. Users can find details of the design methodology for this ontology at https://content.iospress.com/articles/applied-ontology/ao230279" .
 
 _:b0    rdf:type  owl:Class .
 
@@ -79,20 +79,20 @@ _:b2    rdf:rest   rdf:nil ;
 _:b1    rdf:rest   _:b2 ;
         rdf:first  lis:InformationObject .
 
-lis:isAbout  rdf:type  owl:ObjectProperty .
-
 _:b3    rdf:type            owl:Restriction ;
         owl:onProperty      lis:isAbout ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure .
 
+lis:isAbout  rdf:type  owl:ObjectProperty .
+
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
-
-lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
 _:b4    rdf:type            owl:Restriction ;
         owl:onProperty      lis:hasParticipant ;
         owl:someValuesFrom  lis:PhysicalObject .
+
+lis:hasParticipant  rdf:type  owl:ObjectProperty .
 
 lis:PhysicalObject  rdf:type  owl:Class .
 
@@ -114,20 +114,20 @@ _:b7    rdf:rest   rdf:nil ;
 _:b6    rdf:rest   _:b7 ;
         rdf:first  proc-spo:MaintenanceTask .
 
-proc-cmto:addresses  rdf:type  owl:ObjectProperty .
-
 _:b8    rdf:type            owl:Restriction ;
         owl:onProperty      proc-cmto:addresses ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure .
 
+proc-cmto:addresses  rdf:type  owl:ObjectProperty .
+
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
-
-proc-cmto:resultsIn  rdf:type  owl:ObjectProperty .
 
 _:b9    rdf:type            owl:Restriction ;
         owl:onProperty      proc-cmto:resultsIn ;
         owl:someValuesFrom  proc-cmto:FunctionalFailure .
+
+proc-cmto:resultsIn  rdf:type  owl:ObjectProperty .
 
 proc-cmto:FunctionalFailure
         rdf:type  owl:Class .
@@ -202,8 +202,8 @@ proc-cmto:functionalFailureRealisedIn
         rdf:type                owl:ObjectProperty ;
         owl:propertyChainAxiom  _:b10 .
 
-_:b10   rdf:rest   _:b11 ;
-        rdf:first  proc-cmto:functionalFailureRealizedIn .
-
 _:b11   rdf:rest   rdf:nil ;
         rdf:first  proc-cmto:triggers .
+
+_:b10   rdf:rest   _:b11 ;
+        rdf:first  proc-cmto:functionalFailureRealizedIn .
