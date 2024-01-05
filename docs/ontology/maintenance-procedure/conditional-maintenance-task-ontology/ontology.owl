@@ -79,6 +79,20 @@
     
 
 
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom -->
+
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example -->
+
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"/>
+    
+
+
     <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive -->
 
 
@@ -90,6 +104,20 @@
 
 
     <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms -->
+
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation -->
+
+
+    <owl:AnnotationProperty rdf:about="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation"/>
     
 
 
@@ -237,6 +265,13 @@
     
 
 
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject -->
+
+
+    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
+    
+
+
     <!-- http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#CorrectiveMaintenanceTask -->
 
 
@@ -255,8 +290,11 @@
         <rdfs:subClassOf rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintenanceTask"/>
         <rdfs:comment>A OMPD:maintenance task that addresses a OMPD:functional failure</rdfs:comment>
         <rdfs:label>Corrective Maintenance Task</rdfs:label>
+        <AnnotationVocabulary:example>Replace the leaking mechanical seal, replace the blown light bulb</AnnotationVocabulary:example>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
         <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+        <AnnotationVocabulary:semiFormalNaturalLanguageAxioms>A OMPD:maintenance task that addresses a OMPD:functional failure</AnnotationVocabulary:semiFormalNaturalLanguageAxioms>
+        <AnnotationVocabulary:subjectMatterExpertExplanation>maintenance carried out after fault recognition and intended to restore an item into a state in which it can perform a required function (EN13306)</AnnotationVocabulary:subjectMatterExpertExplanation>
     </owl:Class>
     
 
@@ -272,10 +310,14 @@
                 <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>An ISO:Event that resuts in a OMPD: Functional Failure</rdfs:comment>
+        <rdfs:comment>An LIS:Event that resuts in a OMPD: Functional Failure</rdfs:comment>
         <rdfs:label>Failure Event</rdfs:label>
+        <AnnotationVocabulary:adaptedFrom>https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureEvent</AnnotationVocabulary:adaptedFrom>
+        <AnnotationVocabulary:example>explosion, seizure, loss of power, loss of control</AnnotationVocabulary:example>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
         <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+        <AnnotationVocabulary:semiFormalNaturalLanguageAxioms>An LIS:Event that resuts in a OMPD: Functional Failure</AnnotationVocabulary:semiFormalNaturalLanguageAxioms>
+        <AnnotationVocabulary:subjectMatterExpertExplanation>event that causes an item to lose its ability to perform a required function (IOF Maintenance Reference Ontology)</AnnotationVocabulary:subjectMatterExpertExplanation>
     </owl:Class>
     
 
@@ -296,10 +338,13 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
-        <rdfs:comment>An ISO:Information object that denotes a OMPD:functional failure</rdfs:comment>
+        <rdfs:comment>An LIS:Information object that denotes a OMPD:functional failure</rdfs:comment>
         <rdfs:label>Failure Mode Observation</rdfs:label>
+        <AnnotationVocabulary:example>Erratic output, vibration,  over-heating</AnnotationVocabulary:example>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</AnnotationVocabulary:isPrimitive>
         <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+        <AnnotationVocabulary:semiFormalNaturalLanguageAxioms>An LIS:Information object that denotes a OMPD:functional failure</AnnotationVocabulary:semiFormalNaturalLanguageAxioms>
+        <AnnotationVocabulary:subjectMatterExpertExplanation>the manner in which a failure occurs (IEC60050-192, EN 13306, ISO 14224)</AnnotationVocabulary:subjectMatterExpertExplanation>
     </owl:Class>
     
 
@@ -312,21 +357,18 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
-                <owl:someValuesFrom rdf:resource="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem"/>
+                <owl:someValuesFrom rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment>An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item</rdfs:comment>
+        <rdfs:comment>An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object</rdfs:comment>
         <rdfs:label>Functional Failure</rdfs:label>
+        <AnnotationVocabulary:adaptedFrom>https://spec.industrialontologies.org/iof/ontology/maintenance/MaintenanceReferenceOntology/FailureProcess</AnnotationVocabulary:adaptedFrom>
+        <AnnotationVocabulary:example>deformation process, corrosion process</AnnotationVocabulary:example>
         <AnnotationVocabulary:isPrimitive rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</AnnotationVocabulary:isPrimitive>
         <AnnotationVocabulary:maturity rdf:resource="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released"/>
+        <AnnotationVocabulary:semiFormalNaturalLanguageAxioms>An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object</AnnotationVocabulary:semiFormalNaturalLanguageAxioms>
+        <AnnotationVocabulary:subjectMatterExpertExplanation>process that changes some quality of an item causing the the item to become degraded or failed such that it fails to fulfil its required function (IOF Maintenance Reference Ontology, IEC60050-192:12015, ISO 14224-2016, EN13306)</AnnotationVocabulary:subjectMatterExpertExplanation>
     </owl:Class>
-    
-
-
-    <!-- http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem -->
-
-
-    <owl:Class rdf:about="http://spec.equonto.com/ontology/maintenance-procedure/static-procedure-ontology#MaintainableItem"/>
     
 
 

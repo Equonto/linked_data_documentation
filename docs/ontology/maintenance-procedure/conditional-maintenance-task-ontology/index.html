@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology","name":"Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology", "headline":"The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures.", "dateReleased":"Fri Dec 15 12:43:55 AWST 2023", "license":"http://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"The University of Western Australia & Equonto Pty. Ltd."}], "contributor":[{"@type":"Person","name":"Caitlin Woods: The University of Western Australia and Equonto"},{"@type":"Person","name":"Melinda Hodkiewicz: The University of Western Australia"},{"@type":"Person","name":"Tim French: The University of Western Australia"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology","name":"Ontology for Maintenance Procedure Documentation (OMPD) Conditional Maintenance Task Ontology", "headline":"The OMPD Conditional Mainteance Task Ontology captures conditial task information (i.e. in response to some limit or functional failure) present in some industrial maintenance procedures.", "dateReleased":"Fri Jan 05 10:09:48 AWST 2024", "license":"http://opensource.org/licenses/MIT", "author":[{"@type":"Person","name":"The University of Western Australia & Equonto Pty. Ltd."}], "contributor":[{"@type":"Person","name":"Caitlin Woods: The University of Western Australia and Equonto"},{"@type":"Person","name":"Melinda Hodkiewicz: The University of Western Australia"},{"@type":"Person","name":"Tim French: The University of Western Australia"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -147,6 +147,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom">
+         <span>adapted from</span>
+      </a>
+   </li>
+   <li>
       <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
          <span>contributor</span>
       </a>
@@ -154,6 +160,12 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
          <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+         <span>example</span>
       </a>
    </li>
    <li>
@@ -176,6 +188,18 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
          <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+         <span>semi formal natural language axioms</span>
+      </a>
+   </li>
+   <li>
+      <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation"
+         title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation">
+         <span>subject matter expert explanation</span>
       </a>
    </li>
    <li>
@@ -253,7 +277,7 @@ This section provides details for each class and property defined by Maintenance
       <p>
          <strong>IRI:</strong> http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureEvent</p>
       <div class="comment">
-         <span class="markdown">An ISO:Event that resuts in a OMPD: Functional Failure</span>
+         <span class="markdown">An LIS:Event that resuts in a OMPD: Functional Failure</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -273,7 +297,7 @@ This section provides details for each class and property defined by Maintenance
       <p>
          <strong>IRI:</strong> http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FailureModeObservation</p>
       <div class="comment">
-         <span class="markdown">An ISO:Information object that denotes a OMPD:functional failure</span>
+         <span class="markdown">An LIS:Information object that denotes a OMPD:functional failure</span>
       </div>
       <dl class="description">
          <dt>is equivalent to</dt>
@@ -307,7 +331,7 @@ This section provides details for each class and property defined by Maintenance
       <p>
          <strong>IRI:</strong> http://spec.equonto.com/ontology/maintenance-procedure/conditional-maintenance-task-ontology#FunctionalFailure</p>
       <div class="comment">
-         <span class="markdown">An ISO: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some OMPD: Maintainable Item</span>
+         <span class="markdown">An LIS: Activity that is represented in a OMPD: Failure Mode Observation and hasParticipant some LIS: Physical Object</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -484,6 +508,12 @@ This section provides details for each class and property defined by Maintenance
          </a>
       </li>
       <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom">
+            <span>adapted from</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
             <span>contributor</span>
          </a>
@@ -491,6 +521,12 @@ This section provides details for each class and property defined by Maintenance
       <li>
          <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
             <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+            <span>example</span>
          </a>
       </li>
       <li>
@@ -516,6 +552,18 @@ This section provides details for each class and property defined by Maintenance
          </a>
       </li>
       <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+            <span>semi formal natural language axioms</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation"
+            title="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation">
+            <span>subject matter expert explanation</span>
+         </a>
+      </li>
+      <li>
          <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
             <span>title</span>
          </a>
@@ -528,6 +576,14 @@ This section provides details for each class and property defined by Maintenance
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+   </div>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom">
+      <h3>adapted from<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom</p>
    </div>
    <div class="entity" id="http://purl.org/dc/terms/contributor">
       <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
@@ -544,6 +600,14 @@ This section provides details for each class and property defined by Maintenance
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+   </div>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example">
+      <h3>example<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/example</p>
    </div>
    <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/isPrimitive">
       <h3>is primitive<sup class="type-ap" title="annotation property">ap</sup>
@@ -576,6 +640,22 @@ This section provides details for each class and property defined by Maintenance
       </h3>
       <p>
          <strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+   </div>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms">
+      <h3>semi formal natural language axioms<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/semiFormalNaturalLanguageAxioms</p>
+   </div>
+   <div class="entity" id="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation">
+      <h3>subject matter expert explanation<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/subjectMatterExpertExplanation</p>
    </div>
    <div class="entity" id="http://purl.org/dc/terms/title">
       <h3>title<sup class="type-ap" title="annotation property">ap</sup>
