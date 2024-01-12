@@ -6,5 +6,6 @@
 	 dc:title "Maintenance Activity Ontology";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2024-01-12";
 .
 :agent0 a prov:Agent; foaf:name "Caitlin Woods, Matt Selway, Tyler Bikaun, Markus Stumptner and Melinda Hodkiewicz".
